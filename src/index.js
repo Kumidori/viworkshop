@@ -9,12 +9,19 @@ import {
 	createStore
 } from "redux";
 import thunk from 'redux-thunk';
+import myThunk from './thunk';
+import { loading, users } from './reducer';
+
 
 const store = createStore(
-	combineReducers({}),
+	combineReducers({
+		loading,
+		users
+	}),
 	{ loading: false, users: [] },
 	applyMiddleware(thunk)
 );
+store.dispatch(myThunk);
 
 ReactDOM.render(
 	<Provider store={store}>
