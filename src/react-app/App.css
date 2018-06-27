@@ -7,6 +7,25 @@
   height: 150px;
   padding: 20px;
   color: #F82075;
+  position: relative;
+}
+
+.app__header::after {
+  content: "Icons made by Freepik";
+  position: absolute;
+  bottom: 12em;
+  right: 2em;
+  transform: rotate(-90deg);
+  font-size: 8px;
+  transform-origin: top right;
+}
+
+.app__header::before {
+  content: "Made awesome by: @jurekbarth™";
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  color: #EAEBED;
 }
 
 .app__title {
